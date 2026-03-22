@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "exponential-fit"
+version = "1.0.0"
+description = "Fit f(x) = a·exp(b·x) + c·exp(d·x) with optional parameter constraints"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+dependencies = [
+    "numpy>=1.22.0",
+    "scipy>=1.8.0",
+    "matplotlib>=3.5.0",
+    "requests>=2.27.0",
+    "pandas>=1.4.0",
+    "openpyxl>=3.0.9",
+    "xlrd>=2.0.1",
+]
+
+[project.scripts]
+exponential-fit = "exponential_fit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["exponential_fit*"]
