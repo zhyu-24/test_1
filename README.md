@@ -12,6 +12,68 @@ This tool supports:
 
 ---
 
+## ⚡ PyCharm 快速使用 / PyCharm Quick Start
+
+> 想在 PyCharm 里直接粘贴运行？按下面四步即可，**5 分钟内跑起来**。
+>
+> Want to paste and run immediately in PyCharm? Follow these four steps.
+
+### 第一步：获取完整代码 / Step 1 – Get the complete code
+
+打开下面的链接，用 **Ctrl+A → Ctrl+C**（Mac: ⌘A → ⌘C）复制全部内容：
+
+Open the link below and press **Ctrl+A → Ctrl+C** (Mac: ⌘A → ⌘C) to copy everything:
+
+👉 **[点击查看/复制完整代码 exponential_fit.py](https://github.com/zhyu-24/test_1/blob/main/exponential_fit.py)**
+
+> 在 GitHub 页面右上角点击 **Raw** 按钮可以看到纯文本代码，更方便全选复制。直接链接：
+> [https://raw.githubusercontent.com/zhyu-24/test_1/main/exponential_fit.py](https://raw.githubusercontent.com/zhyu-24/test_1/main/exponential_fit.py)
+>
+> On the GitHub page click the **Raw** button (top-right) to see plain text — easier to select all. Direct raw link above.
+
+---
+
+### 第二步：在 PyCharm 中新建文件 / Step 2 – Create a new file in PyCharm
+
+1. 打开 PyCharm，新建一个项目（或在已有项目中操作）
+2. 在左侧项目面板右键 → **New → Python File**
+3. 文件名填 `exponential_fit`（PyCharm 会自动加 `.py`）
+4. 将刚才复制的代码全部粘贴进去（**Ctrl+V** / **⌘V**）
+
+Steps:
+1. Open PyCharm and create/open a project
+2. Right-click the project panel → **New → Python File**
+3. Name the file `exponential_fit` (PyCharm adds `.py` automatically)
+4. Paste the copied code (**Ctrl+V** / **⌘V**)
+
+---
+
+### 第三步：安装依赖 / Step 3 – Install dependencies
+
+打开 PyCharm 底部的 **Terminal**（终端）标签，运行：
+
+Open the **Terminal** tab at the bottom of PyCharm and run:
+
+```bash
+pip install numpy scipy matplotlib requests pandas openpyxl xlrd
+```
+
+> 如果提示找不到 `pip`，尝试 `python -m pip install ...`。
+
+---
+
+### 第四步：运行 / Step 4 – Run
+
+在编辑器中右键 → **Run 'exponential_fit'**，或按 **Shift+F10**。
+
+Right-click inside the editor → **Run 'exponential_fit'**, or press **Shift+F10**.
+
+程序会在底部的 **Run** 面板中显示交互式提示。直接按 **Enter** 可跳过 URL 和约束输入，使用内置示例数据。
+
+The program shows interactive prompts in the **Run** panel. Press **Enter** to skip URL / constraint inputs and use the built-in sample data.
+
+---
+
 ## 目录 / Contents
 
 1. [环境要求 / Requirements](#环境要求--requirements)
