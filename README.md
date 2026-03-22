@@ -1,5 +1,17 @@
 # 双指数函数曲线拟合工具 / Double-Exponential Curve Fitting
 
+> **📂 完整项目已在主分支（main）可见 / Complete project is on the `main` branch**
+>
+> 如果您是通过 Pull Request 链接找到本项目的，所有代码文件已合并至 `main` 分支，可直接访问：
+> **[https://github.com/zhyu-24/test_1](https://github.com/zhyu-24/test_1)**
+>
+> If you arrived here via a Pull Request link, all code has been merged into the `main` branch.
+> Browse or download the complete project at the link above, or clone it:
+>
+> ```bash
+> git clone https://github.com/zhyu-24/test_1.git
+> ```
+
 > **Model:** `f(x) = a·exp(b·x) + c·exp(d·x)`
 
 本工具支持：
