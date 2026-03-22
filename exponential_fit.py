@@ -590,7 +590,8 @@ def generate_sample_data(a=3.0, b=-0.5, c=1.5, d=-0.05,
     n_points : int
         Number of data points.
     noise_std : float
-        Noise level as a fraction of the mean signal amplitude.
+        Noise level as a multiplier of the signal's standard deviation
+        (i.e. the noise std dev = ``noise_std * std(y_clean)``).
     random_seed : int
         Random seed for reproducibility.
 

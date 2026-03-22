@@ -74,16 +74,54 @@ The program shows interactive prompts in the **Run** panel. Press **Enter** to s
 
 ---
 
+## 项目结构 / Project Structure
+
+```
+exponential-fit/
+├── exponential_fit/          # Python 包 / Python package
+│   ├── __init__.py           # 公开 API / Public API exports
+│   ├── model.py              # 模型函数 double_exponential()
+│   ├── constraints.py        # 安全表达式求值器 + 约束解析
+│   ├── data_loader.py        # URL 数据加载 (Google Sheets / OneDrive / 直链)
+│   ├── fitting.py            # fit_double_exponential(), compute_r_squared()
+│   ├── output.py             # print_results(), plot_fit()
+│   ├── sample_data.py        # 示例数据生成 generate_sample_data()
+│   └── cli.py                # 交互式命令行入口 main()
+├── tests/
+│   └── test_fitting.py       # 单元测试 (pytest)
+├── main.py                   # 顶层入口 / Top-level entry point
+├── pyproject.toml            # 项目元数据 + pip 安装配置
+├── requirements.txt          # 依赖清单
+└── README.md
+```
+
+### 快速安装并运行 / Quick install & run
+
+```bash
+# 克隆仓库后，在项目根目录执行：
+pip install -e .          # 以可编辑模式安装（仅需一次）
+python main.py            # 启动交互式拟合程序
+
+# 或者直接用命令行工具（安装后可用）：
+exponential-fit
+
+# 运行测试：
+python -m pytest tests/ -v
+```
+
+---
+
 ## 目录 / Contents
 
-1. [环境要求 / Requirements](#环境要求--requirements)
-2. [运行方式一：本地 Python（推荐）/ Option 1: Local Python (Recommended)](#运行方式一本地-python推荐--option-1-local-python-recommended)
-3. [运行方式二：Google Colab（无需安装，最简单）/ Option 2: Google Colab (Easiest, no install)](#运行方式二google-colab无需安装最简单--option-2-google-colab-easiest-no-install)
-4. [运行方式三：Jupyter Notebook / Option 3: Jupyter Notebook](#运行方式三jupyter-notebook--option-3-jupyter-notebook)
-5. [运行方式四：在线 IDE（Replit / Gitpod）/ Option 4: Online IDE](#运行方式四在线-idereplit--gitpod--option-4-online-ide)
-6. [交互式使用说明 / Interactive Usage Guide](#交互式使用说明--interactive-usage-guide)
-7. [在代码中直接调用 / Calling the API Directly](#在代码中直接调用--calling-the-api-directly)
-8. [常见问题 / FAQ](#常见问题--faq)
+1. [项目结构 / Project Structure](#项目结构--project-structure)
+2. [环境要求 / Requirements](#环境要求--requirements)
+3. [运行方式一：本地 Python（推荐）/ Option 1: Local Python (Recommended)](#运行方式一本地-python推荐--option-1-local-python-recommended)
+4. [运行方式二：Google Colab（无需安装，最简单）/ Option 2: Google Colab (Easiest, no install)](#运行方式二google-colab无需安装最简单--option-2-google-colab-easiest-no-install)
+5. [运行方式三：Jupyter Notebook / Option 3: Jupyter Notebook](#运行方式三jupyter-notebook--option-3-jupyter-notebook)
+6. [运行方式四：在线 IDE（Replit / Gitpod）/ Option 4: Online IDE](#运行方式四在线-idereplit--gitpod--option-4-online-ide)
+7. [交互式使用说明 / Interactive Usage Guide](#交互式使用说明--interactive-usage-guide)
+8. [在代码中直接调用 / Calling the API Directly](#在代码中直接调用--calling-the-api-directly)
+9. [常见问题 / FAQ](#常见问题--faq)
 
 ---
 
